@@ -1,0 +1,182 @@
+@import url("https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap");
+
+/* Colors */
+:root {
+  --on-background: rgb(66, 66, 66);
+  --background: rgb(255, 255, 255);
+}
+
+[data-theme="dark"] {
+  --on-background: rgba(255, 255, 255, 0.9);
+  --background: rgb(18, 18, 18);
+}
+
+/* General */
+html {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: jost, sans-serif;
+  color: var(--on-background);
+  background-color: var(--background);
+  transition: background-color 1s ease, color 1s ease;
+  overflow-x: hidden;
+}
+
+h2 {
+  font-size: 40px;
+}
+
+main {
+  position: relative;
+}
+
+a {
+  text-decoration: none;
+  color: var(--on-background);
+}
+
+a:hover {
+  padding-bottom: 5px;
+  border-bottom: 5px solid var(--on-background);
+}
+
+/* Sections */
+section {
+  min-height: 100vh;
+  position: relative;
+  display: grid;
+  place-items: center;
+}
+
+/* Section 1 */
+
+/* Dark mode switch */
+.theme-switcher {
+  z-index: 100;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.theme-switcher span {
+  margin-right: 10px;
+  font-size: 1rem;
+  color: var(--on-background);
+}
+
+.fas {
+  font-size: 30px;
+}
+
+.fas:hover {
+  transform: scale(1.1);
+}
+
+/* Header */
+header {
+  width: 100vw;
+}
+
+@keyframes focus-in-contract {
+  0% {
+    letter-spacing: 1em;
+    filter: blur(12px);
+    opacity: 0;
+  }
+  100% {
+    filter: blur(0);
+    opacity: 1;
+  }
+}
+
+header h1 {
+  font-size: 100px;
+  font-weight: 500;
+  font-style: italic;
+  text-align: center;
+  animation: focus-in-contract;
+  animation-duration: 3s;
+  animation-timing-function: linear;
+}
+
+header .social-media-icons {
+  font-size: 70px;
+  position: relative;
+  top: -60px;
+  text-align: center;
+}
+
+header .social-media-icons i {
+  animation: focus-in-contract 3s linear;
+  transition: transform 0.5s ease;
+  cursor: pointer;
+}
+
+header .social-media-icons i:hover {
+  transform: scale(1.1);
+}
+
+/* Section 2 */
+.main-image {
+  height: 50%;
+  width: auto;
+  position: relative;
+  top: -22%;
+  padding: 20px;
+  border: 10px solid var(--on-background);
+}
+
+/* Section 3 */
+.image-container {
+  position: relative;
+  height: 50vh;
+  top: -25%;
+}
+
+.small-image {
+  width: auto;
+  height: 50%;
+  padding: 20px;
+  border: 10px solid var(--on-background);
+}
+
+.small-image:not(:first-child) {
+  margin-left: 20px;
+}
+
+/* Section 4 */
+.blog-container {
+  margin: 0 auto;
+  width: 50ch;
+}
+
+.blog-item {
+  margin-bottom: 50px;
+}
+
+/* Section 5 */
+.wave {
+  width: 100%;
+}
+
+.wave > svg {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+/* Footer */
+footer {
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
+  text-align: center;
+  color: white;
+}
