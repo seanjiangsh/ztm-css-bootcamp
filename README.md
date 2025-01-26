@@ -6,3 +6,4 @@ A repo for learning CSS in-depth with ZTM.
 
 - Typographix-v1: Design & Typography
 - Typographix-v2: Utilizing Color
+- Typographix-v2: Responsive Design

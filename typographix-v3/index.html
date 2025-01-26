@@ -5,9 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Typographix</title>
     <link rel="icon" type="image/png" href="favicon.png" />
+    <link rel="stylesheet" href="scrollbar.css" />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <!-- Navigation -->
+    <div class="nav-wrapper">
+      <div class="menu-icon" onclick="toggleMenu()">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+      </div>
+      <nav id="nav">
+        <ul>
+          <li><a href="#section-1" onclick="hideMenu()">Home</a></li>
+          <li><a href="#section-2" onclick="hideMenu()">About</a></li>
+          <li><a href="#section-3" onclick="hideMenu()">Gallery</a></li>
+          <li><a href="#section-4" onclick="hideMenu()">Blog</a></li>
+          <li><a href="#section-5" onclick="hideMenu()">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
     <main>
       <!-- Section 1 -->
       <section id="section-1">
@@ -30,9 +48,7 @@
       </section>
       <!-- Section 2 -->
       <section id="section-2">
-        <div>
-          <h2>Cutting Edge Image & Text Generation</h2>
-        </div>
+        <h2>Cutting Edge Image & Text Generation</h2>
         <img
           src="https://unsplash.com/photos/p0j-mE6mGo4/download?ixid=M3wxMjA3fDB8MXxzZWFyY2h8MzJ8fGNvbXB1dGVyfGVufDB8fHx8MTY4NjI5NzkwM3ww&force=true&w=2400"
           alt="Retro Gaming Setup"
@@ -67,39 +83,28 @@
           <article class="blog-item">
             <h3><a href="/">Blog Item 1 Here</a></h3>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi
-              soluta illum hic dolore velit consequuntur cumque fugiat, repellat
-              culpa! Debitis dolore numquam quisquam sunt maiores, quae hic iste
-              nihil eius. Lorem ipsum dolor sit amet consectetur adipisicing
-              elit. In, qui. Molestias explicabo, provident quasi quo dolorum
-              iste aliquid ad officia rem nesciunt porro nulla perferendis amet
-              eveniet eum placeat error...
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim
+              reiciendis assumenda nisi excepturi officia debitis dolorem modi.
+              Illum id autem reiciendis sed aliquam libero, mollitia at incidunt
+              dolore eveniet sint?
             </p>
           </article>
           <article class="blog-item">
             <h3><a href="/">Blog Item 2 Here</a></h3>
             <p>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eum
-              eveniet provident corrupti illum, id ullam architecto quod odio
-              quas quos perspiciatis laborum repellat doloribus est repellendus
-              ratione expedita laboriosam distinctio, Lorem ipsum dolor sit amet
-              consectetur adipisicing elit. Doloribus veritatis delectus quos
-              vitae mollitia itaque porro perspiciatis quasi, repellat at
-              doloremque debitis. Vel suscipit dignissimos velit quo maiores
-              laboriosam nulla...
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem
+              laboriosam accusantium ipsam nam ex nisi itaque quidem, reiciendis
+              amet quibusdam inventore unde modi necessitatibus in. Aperiam fuga
+              commodi corporis non?
             </p>
           </article>
           <article class="blog-item">
             <h3><a href="/">Blog Item 3 Here</a></h3>
             <p>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aut, sit
-              fuga libero culpa veritatis voluptas placeat aperiam excepturi
-              similique provident debitis ipsa laboriosam sint iusto fugit,
-              voluptates cupiditate, odit quae, Lorem ipsum dolor sit amet,
-              consectetur adipisicing elit. Fuga nemo ullam perspiciatis
-              cupiditate deserunt repudiandae dolorum non laudantium aut fugiat
-              voluptatum alias iusto quia dolore, enim repellendus suscipit
-              porro! Voluptatum...
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+              Architecto vero, corporis, rem quam iusto eveniet id fugit aut
+              quisquam soluta dicta tempora blanditiis sit, itaque officia
+              facilis maiores tenetur culpa.
             </p>
           </article>
         </div>
