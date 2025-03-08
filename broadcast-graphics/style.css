@@ -1,0 +1,243 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,200;9..40,400;9..40,600;9..40,900&display=swap");
+
+html {
+  box-sizing: border-box;
+  font-family: "DM Sans", sans-serif;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: rgb(42, 42, 42);
+  overflow: hidden;
+  position: relative;
+  user-select: none;
+}
+
+.container {
+  position: absolute;
+  bottom: 200px;
+  left: 35vw;
+  width: 50vw;
+}
+
+/* Left Box */
+.left-box {
+  position: absolute;
+  left: -167px;
+  z-index: 10;
+}
+
+.image-container {
+  height: 110px;
+  opacity: 0;
+  clip-path: inset(0 0 0 100%);
+  animation: revealLeft 0.5s linear forwards;
+}
+
+/* Main Bar Container */
+.main-bar-container {
+  position: relative;
+  width: max-content;
+}
+
+.gold-bar {
+  position: absolute;
+  z-index: 1;
+  height: 69px;
+  max-width: calc(90vw + 15p);
+  background: url("./gold.jpg") no-repeat;
+  background-size: cover;
+  background-position: top-right;
+  clip-path: polygon(0 0, 0 0, 0% 100%, 0% 100%);
+  animation: slideIn 0.5s ease-in-out forwards 0.1s;
+}
+
+.black-bar {
+  position: absolute;
+  z-index: 2;
+  max-width: 90vw;
+  height: 70px;
+  background: url("./black.jpg") no-repeat;
+  background-size: cover;
+  background-position: top;
+  clip-path: polygon(0 0, 0 0, 0% 100%, 0% 100%);
+  animation: slideIn 0.5s ease-in-out forwards 0.2s;
+}
+
+.main-bar-text {
+  color: white;
+  font-weight: 600;
+  font-size: 45px;
+  z-index: 3;
+  padding-right: 60px;
+  position: relative;
+  top: 10px;
+  margin-left: 70px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Bottom Bar */
+.bottom-bar {
+  height: 41px;
+  background: rgba(0, 0, 0, 0.9);
+  position: absolute;
+  top: 69px;
+  left: -8px;
+  clip-path: polygon(8px 0, 100% 0, 100% 100%, 0% 100%);
+  opacity: 0;
+  animation: slideDownBottom 0.6s ease-in-out forwards 0.2s;
+}
+
+.bottom-bar-text {
+  color: white;
+  font-weight: 600;
+  font-size: 26px;
+  z-index: 3;
+  padding-right: 60px;
+  position: relative;
+  top: 5px;
+  margin-left: 80px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Top Bar */
+.top-bar {
+  width: max-content;
+  height: 41px;
+  background: rgba(243, 249, 255, 0.9);
+  position: absolute;
+  top: 0px;
+  left: 23px;
+  opacity: 0;
+  clip-path: polygon(8px 0, 100% 0, 100% 100%, 0% 100%);
+  animation: slideUpTop 0.5s ease-in forwards 0.2s;
+}
+
+.top-bar-text {
+  color: #333;
+  font-weight: 600;
+  font-size: 26px;
+  position: relative;
+  top: 4px;
+  margin-left: 48px;
+  padding-right: 30px;
+}
+
+/* Main Bar -------------------- */
+/* Animate In */
+@keyframes slideIn {
+  0% {
+    clip-path: polygon(0 0, 0 0, 0% 100%, 0% 100%);
+    opacity: 1;
+  }
+  100% {
+    clip-path: polygon(15px 0, 100% 0, 100% 100%, 0 100%);
+    opacity: 1;
+  }
+}
+/* Animate Out */
+@keyframes slideOut {
+  0% {
+    clip-path: polygon(15px 0, 100% 0, 100% 100%, 0 100%);
+    opacity: 1;
+  }
+  100% {
+    clip-path: polygon(0 0, 0 0, 0% 100%, 0% 100%);
+    opacity: 1;
+  }
+}
+
+/* Bottom Bar ------------------ */
+/* Animate In */
+@keyframes slideDownBottom {
+  0% {
+    top: 0;
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  55% {
+    opacity: 1;
+  }
+  100% {
+    top: 69px;
+    opacity: 1;
+  }
+}
+/* Animate Out */
+@keyframes slideUpBottom {
+  0% {
+    top: 69px;
+    opacity: 1;
+  }
+  90% {
+    opacity: 0;
+  }
+  100% {
+    top: 0;
+    opacity: 0;
+  }
+}
+
+/* Top Bar --------------------- */
+/* Animate In */
+@keyframes slideUpTop {
+  0% {
+    top: 0;
+    opacity: 0;
+  }
+  25% {
+    top: 1;
+  }
+  100% {
+    top: -40px;
+    opacity: 1;
+  }
+}
+/* Animate Out */
+@keyframes slideDownTop {
+  0% {
+    top: -40px;
+    opacity: 1;
+  }
+  98% {
+    opacity: 1;
+  }
+  99% {
+    opacity: 0;
+  }
+  100% {
+    top: 0;
+    opacity: 0;
+  }
+}
+
+/* Left Box -------------------- */
+/* Animate In */
+@keyframes revealLeft {
+  0% {
+    clip-path: inset(0 0 0 100%);
+    opacity: 1;
+  }
+  100% {
+    clip-path: inset(0 0 0 0);
+    opacity: 1;
+  }
+}
+/* Animate out */
+@keyframes hideLeft {
+  0% {
+    clip-path: inset(0 0 0 0);
+    opacity: 1;
+  }
+  100% {
+    clip-path: inset(0 0 0 100%);
+    opacity: 1;
+  }
+}
