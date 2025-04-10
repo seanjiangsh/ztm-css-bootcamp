@@ -1,0 +1,14 @@
+@mixin article {
+  flex: 1;
+  margin: 0 15px;
+  padding: 15px;
+  background: var(--box-shadow-container);
+  box-shadow: var(--box-shadow);
+  border-radius: 5px;
+}
+
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

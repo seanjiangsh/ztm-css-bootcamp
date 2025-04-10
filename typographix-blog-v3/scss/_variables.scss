@@ -1,0 +1,26 @@
+// Variables for colors, fonts, etc.
+$font-stack: "Inter", sans-serif;
+
+:root {
+  --background: rgb(255, 255, 255);
+  --primary-color: hsl(225, 100%, 50%);
+  --primary-font-color: rgb(85, 85, 85);
+  --secondary-font-color: rgb(51, 51, 51);
+  --skeleton-bg-start: #e0e0e0;
+  --skeleton-bg-middle: #f0f0f0;
+  --skeleton-bg-end: #e0e0e0;
+  --box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+  --box-shadow-container: var(--background);
+}
+
+[data-theme="dark"] {
+  --background: rgb(18, 18, 18);
+  --primary-color: hsl(225, 100%, 75%);
+  --primary-font-color: rgb(150, 150, 150);
+  --secondary-font-color: rgb(200, 200, 200);
+  --skeleton-bg-start: #2a2a2a;
+  --skeleton-bg-middle: #3b3b3b;
+  --skeleton-bg-end: #2a2a2a;
+  --box-shadow: 0px 0px 10px rgba(255, 255, 255, 0);
+  --box-shadow-container: rgb(31, 31, 31);
+}
