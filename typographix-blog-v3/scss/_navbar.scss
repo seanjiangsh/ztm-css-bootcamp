@@ -1,3 +1,5 @@
+@use "variables" as *;
+
 /* Sticky Navbar styles */
 nav {
   display: flex;
@@ -15,6 +17,15 @@ nav {
     h1 {
       font-size: 3rem;
       transition: font-size 0.3s ease;
+    }
+
+    #logo {
+      cursor: pointer;
+
+      a {
+        color: var(--secondary-font-color);
+        text-decoration: none;
+      }
     }
   }
 

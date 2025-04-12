@@ -1,3 +1,6 @@
+@use "variables" as *;
+@use "mixins" as *;
+
 /* Footer styles */
 footer {
   @include flex-center;

@@ -1,3 +1,6 @@
+@use "variables" as *;
+@use "mixins" as *;
+
 .featured-article {
   margin-bottom: 50px;
 
@@ -34,15 +37,15 @@
     color: var(--primary-font-color);
     margin-bottom: 15px;
   }
-}
 
-a {
-  text-decoration: none;
-  color: var(--primary-color);
-  transition: color 0.3s;
+  a {
+    text-decoration: none;
+    color: var(--primary-color);
+    transition: color 0.3s;
 
-  &:hover {
-    filter: brightness(0.9);
+    &:hover {
+      filter: brightness(0.9);
+    }
   }
 }
 
