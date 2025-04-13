@@ -1,0 +1,56 @@
+@use "variables" as *;
+@use "mixins" as *;
+
+/* Skeleton styles */
+.hidden {
+  display: none;
+}
+
+.featured-article-skeleton {
+  margin-bottom: 50px;
+}
+
+.article-skeleton {
+  @include article;
+}
+
+.skeleton-image,
+.skeleton-line {
+  background: linear-gradient(
+    90deg,
+    var(--skeleton-bg-start),
+    var(--skeleton-bg-middle),
+    var(--skeleton-bg-end)
+  );
+  background-size: 200% 100%;
+  border-radius: 5px;
+  animation: shimmer 1.5s infinite;
+
+  &.skeleton-image {
+    height: 300px;
+  }
+
+  &.skeleton-line {
+    height: 25px;
+    margin-bottom: 15px;
+
+    &--large {
+      height: 40px;
+      margin: 40px auto;
+    }
+  }
+}
+
+.hidden {
+  display: none;
+}
+
+/* Shimmer animation */
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}

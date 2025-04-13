@@ -1,0 +1,135 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;600;900&display=swap");
+html {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  background: rgb(18, 18, 18);
+  font-family: "Inter", sans-serif;
+  line-height: 1.6;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* Sticky Navbar styles */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 5%;
+  height: 60px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  color: var(--secondary-font-color);
+  background: var(--background);
+}
+nav .nav-left h1 {
+  font-size: 3rem;
+  transition: font-size 0.3s ease;
+}
+nav .nav-left #logo {
+  cursor: pointer;
+}
+nav .nav-left #logo a {
+  color: var(--secondary-font-color);
+  text-decoration: none;
+}
+nav.scrolled .nav-left h1 {
+  font-size: 1.5rem;
+}
+nav .nav-right {
+  display: flex;
+  align-items: center;
+}
+nav .nav-right a {
+  margin-left: 20px;
+  color: var(--secondary-font-color);
+  text-decoration: none;
+}
+nav .nav-right a:hover {
+  filter: brightness(1.1);
+}
+
+/* Dark Mode Switch */
+.theme-switcher {
+  display: flex;
+  align-items: center;
+  z-index: 100;
+  cursor: pointer;
+}
+.theme-switcher .fas {
+  font-size: 30px;
+  margin-left: 20px;
+}
+.theme-switcher .fas:hover {
+  transform: scale(1.1);
+}
+
+/* Footer styles */
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: var(--secondary-font-color);
+  padding: 20px 0;
+  font-size: 1.2rem;
+}
+footer small {
+  text-align: center;
+}
+footer .social-icons {
+  margin-top: 10px;
+}
+footer .social-icons a {
+  margin: 0 10px;
+  color: var(--secondary-font-color);
+  font-size: 1.5rem;
+  transition: color 0.3s ease;
+}
+footer .social-icons a:hover {
+  color: var(--primary-color);
+}
+
+.main {
+  width: 80%;
+  margin: 50px auto;
+}
+
+.featured-article img,
+.article img {
+  width: 100%;
+  max-height: 300px;
+  object-fit: cover;
+  margin-bottom: 15px;
+}
+
+/* Scrollbar */
+/* Width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: none;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background-color: rgb(160, 160, 160);
+  border-radius: 5px;
+  min-height: 40px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: gray;
+}
+
+/*# sourceMappingURL=style.css.map */

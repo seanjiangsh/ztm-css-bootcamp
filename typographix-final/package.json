@@ -1,0 +1,19 @@
+{
+  "name": "typographix",
+  "version": "1.0.0",
+  "description": "Typographix",
+  "main": "index.html",
+  "scripts": {
+    "scss-dev": "sass --watch --source-map scss/main.scss:css/style.css",
+    "scss-prod": "sass --no-source-map --style=compressed scss/main.scss:css/style.css",
+    "live-server": "live-server --watch=css,index.html",
+    "dev": "concurrently \"npm run scss-dev\" \"npm run live-server\""
+  },
+  "author": "Sean Jiang",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^9.1.2",
+    "live-server": "^1.2.2",
+    "sass": "^1.86.0"
+  }
+}
