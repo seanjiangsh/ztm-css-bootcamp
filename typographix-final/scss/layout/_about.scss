@@ -1,1 +1,44 @@
+@use "sass:color";
+@use "../variables" as *;
+@use "../mixins" as *;
 
+#about {
+  @include section;
+  height: 100vh;
+
+  .about-container {
+    @include grid-center;
+    height: 100%;
+    width: 100%;
+
+    .text-container {
+      @include grid-center;
+
+      h2 {
+        font-size: clamp(2rem, 5vw, 3rem);
+      }
+
+      p {
+        width: 75%;
+        font-size: clamp(1rem, 5vw, 1.5rem);
+        line-height: 1.8;
+      }
+
+      .phrase {
+        color: color.adjust($primary-font-color, $lightness: -20%);
+        transition-property: color;
+        transition-timing-function: ease;
+
+        @for $i from 1 through 8 {
+          &:nth-child(#{$i}) {
+            transition-delay: $i * 0.2s;
+          }
+        }
+
+        &.active {
+          color: color.adjust($primary-font-color, $lightness: 20%);
+        }
+      }
+    }
+  }
+}

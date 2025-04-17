@@ -1,1 +1,48 @@
+@use "sass:color";
+@use "../variables" as *;
+@use "../mixins" as *;
 
+/* Home Section */
+.video-container {
+  @include grid-center;
+  position: relative;
+  z-index: -1;
+  height: 100vh;
+
+  video {
+    @include full-screen-fixed;
+    object-fit: cover;
+  }
+}
+
+.overlay {
+  @include full-screen-fixed;
+  @include grid-center;
+  background-color: rgb(0, 0, 0, 0.5);
+
+  h1 {
+    position: relative;
+    color: $primary-font-color;
+    font-size: clamp(3.5rem, 5vw, 6rem);
+    font-weight: 800;
+    z-index: 10;
+
+    animation: colorChange 1.5s ease-in-out infinite alternate;
+    @keyframes colorChange {
+      from {
+        color: color.adjust($primary-font-color, $lightness: -20%);
+      }
+      to {
+        color: white;
+      }
+    }
+  }
+
+  p {
+    color: white;
+    position: relative;
+    text-align: center;
+    font-size: clamp(1rem, 5vw, 1.5rem);
+    font-weight: 200;
+  }
+}

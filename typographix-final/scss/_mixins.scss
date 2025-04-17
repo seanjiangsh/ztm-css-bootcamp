@@ -1,10 +1,25 @@
-@mixin article {
-  flex: 1;
-  margin: 0 15px;
-  padding: 15px;
-  background: var(--box-shadow-container);
-  box-shadow: var(--box-shadow);
-  border-radius: 5px;
+@use "variables" as *;
+
+// Extends the common styles
+@mixin full-screen-fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+@mixin section {
+  min-height: 100vh;
+  width: 100%;
+  position: relative;
+  background: $background;
+  color: $primary-font-color;
+}
+
+@mixin grid-center {
+  display: grid;
+  place-items: center;
 }
 
 @mixin flex-center {
