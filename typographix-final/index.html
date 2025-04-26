@@ -3,26 +3,58 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Typographix Blog</title>
+    <meta
+      name="description"
+      content="Typographix allows ideas to become reality"
+    />
+    <meta name="author" content="Jacinto Design" />
+    <title>Typographix</title>
     <link rel="icon" type="image/png" href="assets/favicon.png" />
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
+    <!-- Navigation -->
+    <nav class="nav-wrapper">
+      <div class="nav-left">
+        <h1>{<span>T</span>}</h1>
+      </div>
+      <div class="nav-right">
+        <div class="menu-icon" onclick="toggleMenu()">
+          <div class="bar1"></div>
+          <div class="bar2"></div>
+          <div class="bar3"></div>
+        </div>
+      </div>
+      <div id="nav">
+        <div class="strip"></div>
+        <div class="strip"></div>
+        <div class="strip"></div>
+        <div class="strip"></div>
+        <div class="strip"></div>
+        <ul>
+          <li><a href="#home" onclick="hideMenu()">Home</a></li>
+          <li><a href="#about" onclick="hideMenu()">About</a></li>
+          <li><a href="#gallery" onclick="hideMenu()">Gallery</a></li>
+          <li><a href="#blog" onclick="hideMenu()">Blog</a></li>
+          <li><a href="#contact" onclick="hideMenu()">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+
     <main>
       <!-- Home Section -->
       <section id="home">
         <!-- Video -->
         <div class="video-container">
-          <video autoplay muted loop>
-            <source src="assets/future-tunnel.mp4" type="video/mp4" />
-            Your browser does not support the video tag.
+          <video autoplay loop muted>
+            <source src="assets/future-tunnel.mp4" />
           </video>
         </div>
         <!-- Overlay -->
         <div class="overlay">
           <div>
             <h1>Typographix</h1>
-            <p>Where ideas become relity.</p>
+            <p>Where ideas become reality</p>
           </div>
         </div>
       </section>
@@ -31,20 +63,242 @@
       <section id="about">
         <div class="about-container">
           <div class="text-container">
-            <h2>About Us</h2>
+            <h2>About</h2>
             <p>
-              <span class="phrase">Typographix leads in AI-driven text and image creation.</span>
-              <span class="phrase">Their technology redefines digital content efficiency.</span>
-              <span class="phrase">They excel in generating engaging narratives and visuals.</span>
-              <span class="phrase">The platform is a haven for creators and businesses.</span>
-              <span class="phrase">Typographix is pioneering in AI creativity.</span>
-              <span class="phrase">Their tools transform ideas into experiences.</span>
-              <span class="phrase">They blend technology, art, and storytelling.</span>
+              <span class="phrase"
+                >Typographix leads in AI-driven text and image creation.</span
+              >
+              <span class="phrase"
+                >Their technology redefines digital content efficiency.</span
+              >
+              <span class="phrase"
+                >They excel in generating engaging narratives and visuals.</span
+              >
+              <span class="phrase"
+                >The platform is a haven for creators and businesses.</span
+              >
+              <span class="phrase"
+                >Typographix is pioneering in AI creativity.</span
+              >
+              <span class="phrase"
+                >Their tools transform ideas into experiences.</span
+              >
+              <span class="phrase"
+                >They blend technology, art, and storytelling.</span
+              >
               <span class="phrase">Inspiring new digital communication.</span>
-          </p>     
-          </p>
+            </p>
+          </div>
         </div>
+      </section>
+
+      <!-- Gallery Section -->
+      <section id="gallery">
+        <div class="gallery-container">
+          <div class="group">
+            <div class="image-box">
+              <img
+                src="assets/gallery-1.jpg"
+                alt="Floating crystal city"
+                loading="lazy"
+              />
+            </div>
+            <div class="text-box">
+              <h3>Transformative AI</h3>
+              <p>
+                Unleash the full potential of advanced AI in your creative
+                endeavors. Our tools enable unique and compelling digital
+                expressions, providing seamless text and image generation with
+                ease and high efficiency.
+              </p>
+            </div>
+          </div>
+          <div class="image-box tall">
+            <img
+              src="assets/gallery-2.jpg"
+              alt="Future green city"
+              loading="lazy"
+            />
+          </div>
+          <div class="group">
+            <div class="text-box">
+              <h3>Revolutionizing Artistry</h3>
+              <p>
+                Experience the synergy of art and cutting-edge technology. Our
+                AI-driven solutions offer unmatched precision and artistic flair
+                in text and image creation, continuing to revolutionize the
+                digital content landscape everyday.
+              </p>
+            </div>
+            <div class="image-box">
+              <img
+                src="assets/gallery-3.jpg"
+                alt="Floating city"
+                loading="lazy"
+              />
+            </div>
+          </div>
+          <div class="image-box tall">
+            <img
+              src="assets/gallery-4.jpg"
+              alt="Alien glowing jungle"
+              loading="lazy"
+            />
+          </div>
+          <div class="group">
+            <div class="image-box">
+              <img
+                src="assets/gallery-5.jpg"
+                alt="Library built into a tree"
+                loading="lazy"
+              />
+            </div>
+            <div class="text-box">
+              <h3>Innovative Creation</h3>
+              <p>
+                Step into the future of dynamic content generation. Our platform
+                caters to a wide range of creative applications, offering
+                intuitive and sophisticated text and image synthesis for diverse
+                needs. You won't be disappointed.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Blog Section -->
+      <section id="blog">
+        <div class="blog-container">
+          <!-- Main Featured Article -->
+          <div class="featured-article">
+            <img src="assets/blog-1.jpg" alt="Computer Setup" loading="lazy" />
+            <h3>Enhancing Productivity: Revolutionizing Modern Workspaces</h3>
+            <p>
+              In the rapidly evolving landscape of work, the concept of
+              productivity has taken center stage, prompting a radical
+              transformation in the design and functionality of modern
+              workspaces. Gone are the days of rigid cubicles and monotonous
+              routines...
+            </p>
+            <a href="article1.html">Read More</a>
+          </div>
+
+          <!-- Three Smaller Articles -->
+          <div class="smaller-articles">
+            <!-- Article 1 -->
+            <div class="article">
+              <img
+                src="assets/blog-2.jpg"
+                alt="Robot on bench"
+                loading="lazy"
+              />
+              <h3>Unveiling the Future: Quantum Leaps in Humanoid Robotics</h3>
+              <p>
+                In a startling turn of events, the field of robotics has taken a
+                monumental leap forward with the introduction of cutting-edge
+                humanoid robots that blur the line between science fiction and
+                reality...
+              </p>
+              <a href="article2.html">Read More</a>
+            </div>
+
+            <!-- Article 2 -->
+            <div class="article">
+              <img
+                src="assets/blog-3.jpg"
+                alt="Underwater Computer"
+                loading="lazy"
+              />
+              <h3>Diving Deep: Underwater Cooling Computer Hardware</h3>
+              <p>
+                In the realm of cutting-edge technology, a groundbreaking
+                solution has emerged to tackle the persistent challenge of
+                cooling high-performance computer hardware: underwater
+                cooling...
+              </p>
+              <a href="article3.html">Read More</a>
+            </div>
+
+            <!-- Article 3 -->
+            <div class="article">
+              <img src="assets/blog-4.jpg" alt="Windmill Farm" loading="lazy" />
+              <h3>Harnessing the Breeze: The Future of Wind Energy</h3>
+              <p>
+                In a world where sustainable energy sources are gaining
+                paramount importance, wind energy emerges as a frontrunner in
+                the race to combat climate change and ensure a cleaner, greener
+                future...
+              </p>
+              <a href="article4.html">Read More</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact Section -->
+      <section id="contact">
+        <div class="contact-container">
+          <h2>Drop us a Message!</h2>
+          <div class="form-container">
+            <form
+              action="https://formspree.io/f/xvojeznp"
+              method="POST"
+              id="myForm"
+            >
+              <div class="grid-container">
+                <div class="form-group">
+                  <label for="first-name">First Name *</label>
+                  <input
+                    type="text"
+                    name="first-name"
+                    id="first-name"
+                    required
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="last-name">Last Name *</label>
+                  <input type="text" name="last-name" id="last-name" required />
+                </div>
+                <div class="form-group">
+                  <label for="telephone">Telephone</label>
+                  <input type="tel" name="telephone" id="telephone" />
+                </div>
+                <div class="form-group">
+                  <label for="email">Email *</label>
+                  <input type="email" name="email" id="email" required />
+                </div>
+              </div>
+              <div class="message">
+                <label for="message">Message *</label>
+                <textarea name="message" id="message" required></textarea>
+              </div>
+              <button type="submit">Submit</button>
+            </form>
+          </div>
+        </div>
+      </section>
     </main>
+
+    <!-- Footer -->
+    <footer>
+      <small>&copy; 2024 Typographix</small>
+      <div class="social-icons">
+        <a href="#"><i class="fa-brands fa-facebook-f" title="Facebook"></i></a>
+        <a href="#"
+          ><i class="fa-brands fa-x-twitter" title="Twitter (X)"></i
+        ></a>
+        <a href="#"><i class="fa-brands fa-instagram" title="Instagram"></i></a>
+        <a href="#"
+          ><i class="fa-brands fa-linkedin-in" title="LinkedIn"></i
+        ></a>
+      </div>
+    </footer>
+
+    <!-- Toast -->
+    <div class="toast-container">
+      <div id="toast" class="toast">Your message has been receieved!</div>
+    </div>
+
     <!-- Script -->
     <script src="script.js"></script>
     <script

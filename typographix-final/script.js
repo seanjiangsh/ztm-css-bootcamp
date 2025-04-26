@@ -1,16 +1,28 @@
 document.addEventListener("DOMContentLoaded", () => {
   const isMobile = window.innerWidth <= 1025;
+  const cooldownElements = new WeakMap();
 
   // Function to create and observe IntersectionObservers
-  function createObserver(selector, observerOptions, toggleClass) {
+  function createObserver(selector, observerOptions, inClass, outClass = null) {
     const items = document.querySelectorAll(selector);
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
+        const element = entry.target;
+        const now = Date.now();
+        const lastToggle = cooldownElements.get(element) || 0;
+
+        // Skip if in cooldown period (1000ms)
+        if (now - lastToggle < 1000) return;
+
         if (entry.isIntersecting) {
-          entry.target.classList.add(toggleClass);
-        } else {
-          entry.target.classList.remove(toggleClass);
+          element.classList.add(inClass);
+          if (outClass) element.classList.remove(outClass);
+        } else if (outClass) {
+          element.classList.remove(inClass);
+          element.classList.add(outClass);
         }
+
+        cooldownElements.set(element, now);
       });
     }, observerOptions);
 
@@ -27,18 +39,19 @@ document.addEventListener("DOMContentLoaded", () => {
   );
   createObserver(
     "#gallery .image-box",
-    { root: null, threshold: isMobile ? 0.5 : 1 },
+    { root: null, threshold: 0.3 },
     "active"
   );
   createObserver(
     "#blog .featured-article, #blog .article",
-    { root: null, threshold: isMobile ? 0.01 : 0.3 },
-    "fadeInUp"
+    { root: null, threshold: 0.2 },
+    "fadeInUp",
+    "fadeOutUp"
   );
   createObserver(
     "#contact > div",
     { root: null, threshold: isMobile ? 0.01 : 0.7 },
-    "fadeInUp"
+    "fadeInOutUp"
   );
 });
 

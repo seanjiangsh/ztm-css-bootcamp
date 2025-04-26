@@ -6,16 +6,4 @@
 @use "./layout/blog";
 @use "./layout/contact";
 @use "./layout/footer";
-
-.main {
-  width: 80%;
-  margin: 50px auto;
-}
-
-.featured-article img,
-.article img {
-  width: 100%;
-  max-height: 300px;
-  object-fit: cover;
-  margin-bottom: 15px;
-}
+@use "./layout/articles";
