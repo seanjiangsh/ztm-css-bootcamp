@@ -11,8 +11,8 @@ document.addEventListener("DOMContentLoaded", () => {
         const now = Date.now();
         const lastToggle = cooldownElements.get(element) || 0;
 
-        // Skip if in cooldown period (1000ms)
-        if (now - lastToggle < 1000) return;
+        // Skip if in cooldown period (500ms)
+        if (now - lastToggle < 500) return;
 
         if (entry.isIntersecting) {
           element.classList.add(inClass);
@@ -44,14 +44,15 @@ document.addEventListener("DOMContentLoaded", () => {
   );
   createObserver(
     "#blog .featured-article, #blog .article",
-    { root: null, threshold: 0.2 },
+    { root: null, threshold: 0.5 },
     "fadeInUp",
     "fadeOutUp"
   );
   createObserver(
     "#contact > div",
-    { root: null, threshold: isMobile ? 0.01 : 0.7 },
-    "fadeInOutUp"
+    { root: null, threshold: 0.5 },
+    "fadeInUp",
+    "fadeOutUp"
   );
 });
 
@@ -80,30 +81,13 @@ function hideMenu() {
 document.getElementById("myForm").addEventListener("submit", function (event) {
   event.preventDefault();
 
-  const form = this;
-  const formData = new FormData(form);
+  // Reset form
+  this.reset();
 
-  fetch(form.action, {
-    method: "POST",
-    body: formData,
-    headers: {
-      Accept: "application/json",
-    },
-  })
-    .then((response) => {
-      if (response.ok) {
-        form.reset();
-        const toast = document.getElementById("toast");
-        toast.classList.add("show");
-        setTimeout(function () {
-          toast.classList.remove("show");
-        }, 10000);
-      } else {
-        // Handle errors here
-        alert("Form submission failed!");
-      }
-    })
-    .catch((error) => {
-      console.error("Error:", error);
-    });
+  // Show toast notification
+  const toast = document.getElementById("toast");
+  toast.classList.add("show");
+  setTimeout(function () {
+    toast.classList.remove("show");
+  }, 10000);
 });

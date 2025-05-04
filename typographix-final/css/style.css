@@ -1,4 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+#contact .contact-container .form-container form .grid-container .form-group input, #contact .contact-container .form-container form .message textarea {
+  background: #525252;
+  border: none;
+  border-radius: 8px;
+  padding: 15px;
+  color: white;
+  font-family: inherit;
+  font-size: inherit;
+}
+
 .fadeInUp {
   animation: fadeInUp 0.8s ease forwards;
 }
@@ -219,6 +229,7 @@ nav .nav-right a:hover {
 }
 #gallery .gallery-container {
   display: flex;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
   flex-direction: row;
@@ -296,6 +307,7 @@ nav .nav-right a:hover {
 
 #blog {
   display: flex;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
   min-height: 100vh;
@@ -460,15 +472,89 @@ nav .nav-right a:hover {
     font-size: 1rem;
   }
 }
+#contact {
+  min-height: 100vh;
+  width: 100%;
+  position: relative;
+  background: rgb(18, 18, 18);
+  color: rgb(150, 150, 150);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+#contact .contact-container {
+  opacity: 0;
+}
+#contact .contact-container h2 {
+  font-size: clamp(2rem, 5vw, 3rem);
+}
+#contact .contact-container .form-container {
+  background: rgb(31, 31, 31);
+  padding: 20px;
+  width: 80vw;
+  margin: 0 auto;
+  border-radius: 20px;
+  font-size: 1rem;
+}
+#contact .contact-container .form-container form .grid-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+#contact .contact-container .form-container form .grid-container .form-group {
+  display: flex;
+  flex-direction: column;
+}
+#contact .contact-container .form-container form .grid-container .form-group label {
+  color: white;
+  margin-bottom: 5px;
+}
+#contact .contact-container .form-container form .grid-container .form-group input:focus {
+  outline: none;
+  background: rgb(56.5, 56.5, 56.5);
+}
+#contact .contact-container .form-container form .message label {
+  position: relative;
+  top: 15px;
+  color: white;
+}
+#contact .contact-container .form-container form .message textarea {
+  box-sizing: border-box;
+  width: 100%;
+  margin: 20px 20px 0 0;
+  height: 200px;
+  resize: vertical;
+}
+#contact .contact-container .form-container form button {
+  width: 100%;
+  padding: 15px;
+  margin-top: 20px;
+  background: rgb(158.5, 158.5, 158.5);
+  border: none;
+  border-radius: 50px;
+  color: rgb(18, 18, 18);
+  font-size: 1.5rem;
+  transition: background 0.3s, color 0.3s;
+  cursor: pointer;
+}
+#contact .contact-container .form-container form button:hover {
+  background: rgb(56.5, 56.5, 56.5);
+  color: rgb(200, 200, 200);
+}
+
 /* Footer styles */
 footer {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  flex-direction: column;
-  color: var(--secondary-font-color);
+  background: rgb(18, 18, 18);
+  color: rgb(200, 200, 200);
   padding: 20px 0;
   font-size: 1.2rem;
+  position: relative;
+  z-index: 9;
 }
 footer small {
   text-align: center;
@@ -478,12 +564,12 @@ footer .social-icons {
 }
 footer .social-icons a {
   margin: 0 10px;
-  color: var(--secondary-font-color);
+  color: rgb(200, 200, 200);
   font-size: 1.5rem;
-  transition: color 0.3s ease;
+  transition: color 0.2s ease-in-out;
 }
 footer .social-icons a:hover {
-  color: var(--primary-color);
+  color: hsl(225, 100%, 75%);
 }
 
 article {
@@ -531,6 +617,50 @@ article p {
 .right-image-article {
   flex-direction: row-reverse;
   align-items: flex-start;
+}
+
+.toast-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+}
+.toast-container .toast {
+  visibility: hidden;
+  min-width: 250px;
+  background: #636363;
+  color: white;
+  text-align: center;
+  font-size: 1.2rem;
+  border-radius: 8px;
+  padding: 1rem;
+  position: fixed;
+  top: 10px;
+  z-index: 100;
+}
+.toast-container .toast.show {
+  visibility: visible;
+  animation: fadeIn 0.5s, fadeOut 0.5s 9.5s;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    top: 0;
+  }
+  to {
+    opacity: 1;
+    top: 10px;
+  }
+}
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+    top: 10px;
+  }
+  to {
+    opacity: 0;
+    top: 0;
+  }
 }
 
 /* Scrollbar */

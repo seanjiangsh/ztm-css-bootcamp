@@ -1,0 +1,50 @@
+@use "sass:color";
+@use "../variables" as *;
+@use "../mixins" as *;
+
+.toast-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+
+  .toast {
+    visibility: hidden;
+    min-width: 250px;
+    background: color.adjust($primary-font-color, $lightness: -20%);
+    color: white;
+    text-align: center;
+    font-size: 1.2rem;
+    border-radius: 8px;
+    padding: 1rem;
+    position: fixed;
+    top: 10px;
+    z-index: 100;
+
+    &.show {
+      visibility: visible;
+      animation: fadeIn 0.5s, fadeOut 0.5s 9.5s;
+    }
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      top: 0;
+    }
+    to {
+      opacity: 1;
+      top: 10px;
+    }
+  }
+  @keyframes fadeOut {
+    from {
+      opacity: 1;
+      top: 10px;
+    }
+    to {
+      opacity: 0;
+      top: 0;
+    }
+  }
+}

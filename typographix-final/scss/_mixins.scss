@@ -43,10 +43,21 @@
   place-items: center;
 }
 
-@mixin flex-center {
+@mixin flex-center($direction: row) {
   display: flex;
+  flex-direction: $direction;
   align-items: center;
   justify-content: center;
+}
+
+%contact-input {
+  background: $input-bg;
+  border: none;
+  border-radius: 8px;
+  padding: 15px;
+  color: white;
+  font-family: inherit;
+  font-size: inherit;
 }
 
 // Shared Animation

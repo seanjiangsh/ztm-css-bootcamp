@@ -1,7 +1,10 @@
+@use "sass:color";
+
 // Variables for colors, fonts, etc.
 $font-stack: "Inter", sans-serif;
 $background: rgb(18, 18, 18);
 $background-alt: rgb(31, 31, 31);
+$input-bg: color.adjust($background-alt, $lightness: 20%);
 $primary-color: hsl(225, 100%, 75%);
 $primary-font-color: rgb(150, 150, 150);
 $secondary-font-color: rgb(200, 200, 200);

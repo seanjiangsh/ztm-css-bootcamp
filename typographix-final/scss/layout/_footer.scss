@@ -3,11 +3,13 @@
 
 /* Footer styles */
 footer {
-  @include flex-center;
-  flex-direction: column;
-  color: var(--secondary-font-color);
+  @include flex-center(column);
+  background: $background;
+  color: $secondary-font-color;
   padding: 20px 0;
   font-size: 1.2rem;
+  position: relative;
+  z-index: 9;
 
   small {
     text-align: center;
@@ -18,12 +20,12 @@ footer {
 
     a {
       margin: 0 10px;
-      color: var(--secondary-font-color);
+      color: $secondary-font-color;
       font-size: 1.5rem;
-      transition: color 0.3s ease;
+      transition: color 0.2s ease-in-out;
 
       &:hover {
-        color: var(--primary-color);
+        color: $primary-color;
       }
     }
   }
