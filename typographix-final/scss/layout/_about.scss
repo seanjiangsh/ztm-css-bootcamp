@@ -16,12 +16,28 @@
 
       h2 {
         font-size: clamp(2rem, 5vw, 3rem);
+
+        @include tablet-horizontal {
+          margin-left: 5%;
+        }
+        @include tablet-vertical {
+          margin-left: 5%;
+        }
       }
 
       p {
         width: 75%;
         font-size: clamp(1rem, 5vw, 1.5rem);
         line-height: 1.8;
+
+        @include tablet-horizontal {
+          width: 90%;
+          margin-left: 5%;
+        }
+        @include tablet-vertical {
+          width: 90%;
+          margin-left: 5%;
+        }
       }
 
       .phrase {

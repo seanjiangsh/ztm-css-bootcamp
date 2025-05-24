@@ -28,6 +28,7 @@
 @mixin article-img {
   width: 100%;
   max-height: 300px;
+  min-height: 300px;
   object-fit: cover;
   margin-bottom: 15px;
 }
@@ -58,6 +59,41 @@
   color: white;
   font-family: inherit;
   font-size: inherit;
+}
+
+@mixin mobile-gallery-container($padding-bottom) {
+  flex-direction: column;
+  top: 100px;
+  height: auto;
+  padding-bottom: $padding-bottom;
+}
+
+@mixin mobile-gallery-box($width) {
+  width: $width;
+  margin-right: unset;
+  margin: auto;
+  margin-bottom: 10px;
+  opacity: 1;
+  transform: scale(1);
+}
+
+// Media Queries
+@mixin tablet-horizontal-large {
+  @media (max-width: 1367px) {
+    @content;
+  }
+}
+
+@mixin tablet-horizontal {
+  @media (orientation: landscape) and (max-width: 1181px) {
+    @content;
+  }
+}
+
+@mixin tablet-vertical {
+  @media (orientation: portrait) and (max-width: 1025px) {
+    @content;
+  }
 }
 
 // Shared Animation

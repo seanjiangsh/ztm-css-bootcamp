@@ -36,6 +36,10 @@
         color: white;
       }
     }
+
+    @include tablet-vertical {
+      font-size: 4rem;
+    }
   }
 
   p {
