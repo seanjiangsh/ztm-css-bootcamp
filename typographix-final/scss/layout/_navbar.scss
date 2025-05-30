@@ -121,6 +121,10 @@
       transform: translateY(100%);
       transition: transform 0.5s ease;
 
+      @include smartphone-horizontal {
+        top: 5%;
+      }
+
       li {
         margin: 1rem 0;
         opacity: 0;
@@ -146,6 +150,15 @@
 
           @include tablet-horizontal {
             font-size: 3rem;
+          }
+          @include smartphone-vertical {
+            font-size: 3rem;
+          }
+          @include smartphone-small {
+            font-size: 2.5rem;
+          }
+          @include smartphone-horizontal {
+            font-size: 1.5rem;
           }
         }
       }

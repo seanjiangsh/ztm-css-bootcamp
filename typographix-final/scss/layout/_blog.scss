@@ -34,11 +34,21 @@
         @include tablet-vertical {
           font-size: 2.2rem;
         }
+        @include smartphone-vertical {
+          font-size: 1.5rem;
+        }
+        @include smartphone-horizontal {
+          font-size: 2rem;
+        }
       }
 
       p {
         font-size: 1.2rem;
         margin-bottom: 20px;
+
+        @include smartphone-vertical {
+          font-size: 1rem;
+        }
       }
 
       img {
@@ -54,12 +64,22 @@
       @include tablet-vertical {
         flex-direction: column;
       }
+      @include smartphone-horizontal {
+        flex-direction: column;
+      }
 
       .article {
         @include article;
         opacity: 0;
 
         @include tablet-vertical {
+          margin-bottom: 20px;
+        }
+        @include smartphone-vertical {
+          margin: 0;
+          margin-bottom: 20px;
+        }
+        @include smartphone-horizontal {
           margin-bottom: 20px;
         }
 
@@ -71,6 +91,9 @@
           }
           @include tablet-vertical {
             font-size: 1.7rem;
+          }
+          @include smartphone-vertical {
+            font-size: 1.3rem;
           }
         }
 

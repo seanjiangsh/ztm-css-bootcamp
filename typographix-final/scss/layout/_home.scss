@@ -40,6 +40,9 @@
     @include tablet-vertical {
       font-size: 4rem;
     }
+    @include smartphone-vertical {
+      font-size: 3rem;
+    }
   }
 
   p {

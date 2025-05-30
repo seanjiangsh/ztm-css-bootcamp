@@ -6,6 +6,11 @@
   @include section;
   height: 100vh;
 
+  @include smartphone-horizontal {
+    padding-top: 15vh;
+    padding-bottom: 15vh;
+  }
+
   .about-container {
     @include grid-center;
     height: 100%;
